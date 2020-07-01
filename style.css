@@ -1,0 +1,144 @@
+/* Global */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  color: #dfe230;
+  background-color: #0f0f0f;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+button {
+  background-color: #0f0f0f;
+  border: none;
+  color: #dfe230;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #222222;
+}
+
+button:active {
+  background-color: #333333;
+}
+
+button:focus {
+  outline: none;
+  background-color: #333333;
+}
+
+.red-flash {
+  animation: red-flash 5s;
+}
+
+.green-flash {
+  animation: green-flash 5s;
+}
+
+@keyframes red-flash {
+  0% {
+    color: #e23030;
+  }
+  100% {
+    color: #dfe230;
+  }
+}
+
+@keyframes green-flash {
+  0% {
+    color: #68e230;
+  }
+  100% {
+    color: #dfe230;
+  }
+}
+
+
+/* Top list */
+
+.top-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.top-list .item-template {
+  border-radius: 4px;
+  background-color: #ffffff11;
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-list .item-template .left {
+  display: flex;
+  align-items: center;
+}
+
+.top-list .item-template .left .name {
+  padding-left: 8px;
+}
+
+.top-list .item-template .icon {
+  width: 30px;
+}
+
+/* Pop-up */
+
+.pop-up-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000008a;
+}
+
+.pop-up-wrapper .pop-up-card {
+  position: relative;
+  min-width: 300px;
+  max-width: 90%;
+  max-height: 90%;
+  padding-top: 30px;
+  overflow: hidden;
+  border: 1px solid #222222;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+
+.pop-up-wrapper .pop-up-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  background-color: #0f0f0f;
+}
+
+.pop-up-wrapper .pop-up-content {
+  background-color: #f0f0f0;
+  padding: 10px;
+  color: #0f0f0f;
+}
